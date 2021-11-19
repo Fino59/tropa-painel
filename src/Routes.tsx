@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { Routes, Route } from 'react-router-dom'
 
-import Home from "./App"
+import Home from "./components/Pages/Home/Home"
 
 import Layout from "./components/Layout/Layout"
 
@@ -22,27 +22,19 @@ export default function Routing({props}: any) {
     return (
         <Routes>        
 
-            <Fragment>
-            
-                <Route path="/" element={<Layout />} />
-                
-                <Route path="/banner/criar" element={<BannerCreate />} />
-                <Route path="/banner/listar" element={<BannerList />} />
-                
-                <Route path="/contatos/criar" element={<ContactsCreate />} />
-                <Route path="/contatos/listar" element={<ContactsList />} />
+                <Route path="/" element={<Layout />} >
+                    <Route index element={<Home />} />
+                    <Route path="/banner/criar" element={<BannerCreate />} />
+                    <Route path="/banner/listar" element={<BannerList />} />
+                    
+                    <Route path="/contatos/criar" element={<ContactsCreate />} />
+                    <Route path="/contatos/listar" element={<ContactsList />} />
 
-                <Route path="/portfolio/criar" element={<PortfolioCreate />} />
-                <Route path="/portfolio/editar" element={<PortfolioEdit />} />
-                <Route path="/portfolio/listar" element={<PortfolioList />} />
-            
-            </Fragment>
-            
-
-
+                    <Route path="/portfolio/criar" element={<PortfolioCreate />} />
+                    <Route path="/portfolio/editar" element={<PortfolioEdit />} />
+                    <Route path="/portfolio/listar" element={<PortfolioList />} />
+                </Route>
         </Routes>
-        
-        
         
     )
 }

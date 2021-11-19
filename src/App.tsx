@@ -7,9 +7,7 @@ import Routing from './Routes';
 function App() {
   return (
     <BrowserRouter >
-      {/* <div className="App"> */}
         <Routing />        
-      {/* </div> */}
     </BrowserRouter>
   );
 }

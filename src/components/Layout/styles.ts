@@ -1,14 +1,8 @@
 import styled from 'styled-components'
 
 export const ContainerLayout = styled.div`
-position: relative;
-display: block;
-> .content{
-    display: block;
-    padding: 80px 30px 30px 80px;
-    width: 90vw;
-    height: 100vh;
-}
+    position: relative;
+    display: block; 
 `
 
 export const ContainerHeader = styled.header`
@@ -86,6 +80,7 @@ export const Painel = styled.div`
     z-index: 8;
     width: 80px;
     position: fixed;
+    left: 0;
     .navbar {
         width: 80px;
         height: 100vh;
