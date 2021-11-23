@@ -1,18 +1,18 @@
 import styled from "styled-components"
 
 export const ContainerBanner = styled.div`
-    background: #E3E3E3;
+    background: var(--light-gray);
     width: 100vw;
     height: 90vh; 
     padding: 100px 10px 10px 80px;
     position: fixed;    
     h1 {
-        color: #CC6237; 
+        color: var(--primary); 
         margin: 0;
         padding: 20px 0 20px 80px;
     }
     hr {
-        border: 1px solid #CC6237;
+        border: 1px solid var(--primary);
     }
     .banner-buttons {
         width: 85%;
@@ -24,12 +24,12 @@ export const ContainerBanner = styled.div`
             width: 180px;
             height: 45px;
             padding: 15px 0;
-            background: #CC6237;
+            background: var(--primary);
             border-radius: 30px;
             border: none;
             box-sizing: border-box;
 
-            color: #FFF;
+            color: var(--white);
             font-family: 'Chaney'; 
             font-weight: normal;
             font-size: 14px;
@@ -38,14 +38,19 @@ export const ContainerBanner = styled.div`
             box-shadow: 1px 1px 5px #00000059;
             transition: 250ms ease-in-out;
             &:hover {                
-                background: #E3E3E3;
-                color: #CC6237;
-                border: 2px solid #CC6237;
+                background: var(--light-gray);
+                color: var(--primary);
+                border: 2px solid var(--primary);
+            }
+            &:focus {
+                background: var(--light-gray);
+                color: var(--primary);
+                border: 2px solid var(--primary);
             }
         }
     }
     .create-banner{        
-        background: #E3E3E3;
+        background: var(--light-gray);
         width: 100%;
         display: flex;
         flex-direction: column;        
@@ -57,7 +62,7 @@ export const ContainerBanner = styled.div`
         justify-content: center;
             input {
                 box-sizing: border-box;
-                height: 40px;
+                height: 45px;
                 padding: 5px;
                 margin: 10px 0;
                 font-size: 16px;                
@@ -66,7 +71,7 @@ export const ContainerBanner = styled.div`
                 opacity: 0.7;
                 &:hover {
                     opacity: 1;
-                    border: 2px solid #CC6237
+                    border: 2px solid var(--primary)
                 }
                 &:focus {
                     outline: none;                    
@@ -78,12 +83,12 @@ export const ContainerBanner = styled.div`
                 margin-top: 10px;
                 height: 45px;
                 padding: 15px 0;
-                background: #CC6237;
+                background: var(--primary);
                 border-radius: 30px;
                 border: none;
                 box-sizing: border-box;
 
-                color: #FFF;
+                color: var(--white);
                 font-family: 'Chaney'; 
                 font-weight: normal;
                 font-size: 14px;
@@ -92,9 +97,9 @@ export const ContainerBanner = styled.div`
                 box-shadow: 1px 1px 5px #00000059;
                 transition: 250ms ease-in-out;
                 &:hover {                
-                    background: #E3E3E3;
-                    color: #CC6237;
-                    border: 2px solid #CC6237;
+                    background: var(--light-gray);
+                    color: var(--primary);
+                    border: 2px solid var(--primary);
                 }
             }
         }
@@ -106,16 +111,16 @@ export const Listcontainer = styled.div`
     padding: 0 80px; 
     margin-top: 27px;
     table {
-        background: #FFF;
+        background: var(--white);
         width: 85%;
-        border: 1px solid #CC6237;
+        border: 1px solid var(--primary);
         thead {
-            background: #D6BBA9;
+            background: var(--secondary);
             tr:first-child {
                 opacity: 1;
             }
             th {
-                border-left: 3px solid #FFF;
+                border-left: 3px solid var(--white);
             }
         }        
         tr {
@@ -129,7 +134,7 @@ export const Listcontainer = styled.div`
         }
         th {
             font-weight: 500;
-            border-left: 1px solid #CC6237;  
+            border-left: 1px solid var(--primary);  
             border-bottom: 1px solid black;                
         }    
         .id {
@@ -156,14 +161,14 @@ export const Listcontainer = styled.div`
         }            
         tbody > th {
             .gears {
-                background: #FFF;
+                background: var(--white);
                 border: none;
                 padding: 10px;                   
             }
             svg {
                 width: 20px;
                 height: 20px;
-                fill: #CC6237;
+                fill: var(--primary);
                 transition: 150ms ease-in-out;
                 &:hover {
                     transform: scale(1.5);
