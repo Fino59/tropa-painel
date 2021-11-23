@@ -21,7 +21,7 @@ const List: React.FC<any> = (props) => {
                             </th>{/* // <- Usar esse campo para pesquisar por id */}
                             <th>Nome</th>
                             <th>Email</th>
-                            <th>Mensagem</th>
+                            <th className="msg">Mensagem</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,9 +33,9 @@ const List: React.FC<any> = (props) => {
                         </tr>
                         <tr>
                             <th>002</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>Thiago Galhardo</th>
+                            <th>tglhardo@gmail.com</th>
+                            <th>Quero um app para meu negócio</th>
                         </tr>
                         <tr>
                             <th>003</th>
