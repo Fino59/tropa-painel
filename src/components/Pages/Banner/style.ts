@@ -56,26 +56,119 @@ export const ContainerBanner = styled.div`
         flex-direction: column;
         justify-content: center;
             input {
-                height: 25px;
+                box-sizing: border-box;
+                height: 40px;
                 padding: 5px;
                 margin: 10px 0;
+                font-size: 16px;                
                 border-radius: 5px;
                 border: none;
+                opacity: 0.7;
+                &:hover {
+                    opacity: 1;
+                    border: 2px solid #CC6237
+                }
+                &:focus {
+                    outline: none;                    
+                    border-bottom: 3px solid var(--primary);
+                    opacity: 1;                    
+                }                
             }
             button {
-                font-family: 'Bebas Neue';
-                font-size: 20px;
-                background-color: #CC6237;
-                border-radius: 5px;
+                margin-top: 10px;
+                height: 45px;
+                padding: 15px 0;
+                background: #CC6237;
+                border-radius: 30px;
                 border: none;
-                margin: 10px 0;
-                padding: 10px;
+                box-sizing: border-box;
+
+                color: #FFF;
+                font-family: 'Chaney'; 
+                font-weight: normal;
+                font-size: 14px;
+
+                cursor: pointer;
                 box-shadow: 1px 1px 5px #00000059;
-                transition: 150ms ease-in-out ;
-                &:hover {
-                    opacity: 0.8;
+                transition: 250ms ease-in-out;
+                &:hover {                
+                    background: #E3E3E3;
+                    color: #CC6237;
+                    border: 2px solid #CC6237;
                 }
             }
         }
-    }
+    }    
+`
+
+export const Listcontainer = styled.div`
+    width: calc(100% - 60px);
+    padding: 0 80px; 
+    margin-top: 27px;
+    table {
+        background: #FFF;
+        width: 85%;
+        border: 1px solid #CC6237;
+        thead {
+            background: #D6BBA9;
+            tr:first-child {
+                opacity: 1;
+            }
+            th {
+                border-left: 3px solid #FFF;
+            }
+        }        
+        tr {
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        tr:nth-child(2n) {
+            background: #dedede;                
+        }
+        th {
+            font-weight: 500;
+            border-left: 1px solid #CC6237;  
+            border-bottom: 1px solid black;                
+        }    
+        .id {
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            .spacing {
+                width: 20px;
+            }
+            .id-filter {
+                width: 20px;
+                border: none;
+                background: transparent;
+                cursor: pointer;                    
+                img {
+                    width: 20px;
+                }
+            }
+        }        
+        th:first-child {
+            border-left: 0;
+        }            
+        tbody > th {
+            .gears {
+                background: #FFF;
+                border: none;
+                padding: 10px;                   
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: #CC6237;
+                transition: 150ms ease-in-out;
+                &:hover {
+                    transform: scale(1.5);
+                }                    
+            }
+        }
+    }        
 `

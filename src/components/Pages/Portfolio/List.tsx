@@ -1,38 +1,39 @@
 import React from "react";
 
-import { ContainerPortfolio } from "./style";
-
-const Create: React.FC = (props) => {
+const List: React.FC = (props) => {
     return (
-        <ContainerPortfolio>
-            <h1>Listar Portfólio</h1>
+        <>
 
-            <div className="list-contact">
-                <p className="title">Listar Portfólio</p>
+            <div className="list-portfolio">
+                <h3 className="title">Listar Portfólio</h3>
                 <table>
                     <thead>
-                        <th>Título</th>
-                        <th>Ordenação</th>
-                        <th>Tipo</th>
-                        <th>Img principal</th>
-                        <th>Img tipo</th>
-                        <th>Descrição</th>
-                        <th>Status</th>
+                        <tr>    
+                            <th>Título</th>
+                            <th>Ordenação</th>
+                            <th>Tipo</th>
+                            <th>Img principal</th>
+                            <th>Img tipo</th>
+                            <th>Descrição</th>
+                            <th>Status</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <tr>
+                            <th>Aplicativo 1</th>
+                            <th>4</th>
+                            <th>Sistema</th>
+                            <th>Caminho da img principal</th>
+                            <th>Caminho da img tipo</th>
+                            <th>Descrição do sistema</th>
+                            <th>Inativo</th>
+                        </tr>
                     </tbody>              
                 </table>
             </div>
             
-        </ContainerPortfolio>
+        </>
     )
 }
 
-export default Create
+export default List

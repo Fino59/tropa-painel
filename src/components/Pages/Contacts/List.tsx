@@ -1,30 +1,58 @@
 import React from 'react'
-import { ContainerContact } from './style'
+import { ListContact } from './style'
+import SearchIcon from '../../../assets/logo/search-icon.png'
 
 const List: React.FC<any> = (props) => {
 
 
     return (
-        <ContainerContact>
-            <h1>Listar Mensagens</h1>
-
+        <ListContact>
             <div className="list-contact">
-                <p className="title">Listar mensagens</p>
+                <h3 className="title">Listar contatos</h3>
                 <table>
                     <thead>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Mensagem</th>
+                        <tr>
+                            <th className="id">
+                                <div className="spacing"></div>
+                                ID
+                                <button className="id-filter">
+                                    <img src={SearchIcon} alt="Icone de busca por ID"/>
+                                </button>
+                            </th>{/* // <- Usar esse campo para pesquisar por id */}
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Mensagem</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <tr>
+                            <th>001</th>
+                            <th>Eduardo Lima</th>
+                            <th>eduardolima@gmail.com</th>
+                            <th>Quero um sistema para a minha empresa</th>
+                        </tr>
+                        <tr>
+                            <th>002</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>003</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>004</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
                     </tbody>              
                 </table>
-            </div>
-            
-        </ContainerContact>
+            </div>            
+        </ListContact>
     )
 }
 

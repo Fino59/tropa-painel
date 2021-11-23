@@ -46,32 +46,25 @@ const Sidebar: React.FC<any> = (props: any) => {
                     </li>
 
                     <li className="link">
-                        <Link to="/banner/criar">
+                        <Link to="/banner">
                             <Clock />                            
                             <span className="title">Banners</span>
                         </Link>
                     </li>
 
                     <li className="link">
-                        <Link to="/portfolio/criar">
-                            <Cube />                            
-                            <span className="title">Portfólio</span>
-                        </Link>
-                    </li>
-
-                    <li className="link">
-                        <Link to="/">                            
-                            <Globe />
-                            <span className="title">Link generico</span>
-                        </Link>
-                    </li>
-
-                    <li className="link">
-                        <Link to="/contatos/criar">                            
+                        <Link to="/contatos">                            
                             <Envelope />
                             <span className="title">Contato</span>
                         </Link>
                     </li>
+
+                    <li className="link">
+                        <Link to="/portfolio">
+                            <Cube />                            
+                            <span className="title">Portfólio</span>
+                        </Link>
+                    </li>                   
 
                     <li className="link">
                         <Link to="/">                            

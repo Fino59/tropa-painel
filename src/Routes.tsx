@@ -1,19 +1,16 @@
 import React, { Fragment } from "react"
+
 import { Routes, Route } from 'react-router-dom'
 
 import Home from "./components/Pages/Home/Home"
 
 import Layout from "./components/Layout/Layout"
 
-import BannerCreate from "./components/Pages/Banner/Create"
-import BannerList from './components/Pages/Banner/List'
+import Banner from "./components/Pages/Banner/Create"
 
-import ContactsCreate from './components/Pages/Contacts/Create'
-import ContactsList from './components/Pages/Contacts/List'
+import Contacts from './components/Pages/Contacts/Create'
 
-import PortfolioCreate from './components/Pages/Portfolio/Create'
-import PortfolioEdit from './components/Pages/Portfolio/Edit'
-import PortfolioList from './components/Pages/Portfolio/List'
+import Portfolio from './components/Pages/Portfolio/Create'
 
 
 export default function Routing({props}: any) {
@@ -23,16 +20,15 @@ export default function Routing({props}: any) {
         <Routes>        
 
                 <Route path="/" element={<Layout />} >
+                
                     <Route index element={<Home />} />
-                    <Route path="/banner/criar" element={<BannerCreate />} />
-                    <Route path="/banner/listar" element={<BannerList />} />
-                    
-                    <Route path="/contatos/criar" element={<ContactsCreate />} />
-                    <Route path="/contatos/listar" element={<ContactsList />} />
 
-                    <Route path="/portfolio/criar" element={<PortfolioCreate />} />
-                    <Route path="/portfolio/editar" element={<PortfolioEdit />} />
-                    <Route path="/portfolio/listar" element={<PortfolioList />} />
+                    <Route path="/banner" element={<Banner />} />
+                    
+                    <Route path="/contatos" element={<Contacts />} />
+                    
+                    <Route path="/portfolio" element={<Portfolio />} />
+                
                 </Route>
         </Routes>
         

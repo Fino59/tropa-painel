@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Bebas Neue', 'Roboto', 'Oxygen',
+  font-family: 'Bebas Neue', 'Chaney', 'Arto', 'Poppins', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,4 +12,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --primary: #CC6237;
+  --secondary: #D6BBA9;
+  --light-gray: #E3E3E3 ;
+  --white: #FFF;
+  --black: #000;
 }

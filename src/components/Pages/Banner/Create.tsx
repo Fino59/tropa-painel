@@ -1,49 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Btn from '../../../components/form/button/Button'
 import List from './List'
 import { ContainerBanner } from './style'
 
 const Create: React.FC<any> = (props) => {
+
+    const [activeCard, setActiveCard] = useState('createCard')
 
     return (
         <ContainerBanner>
             <h1>Gerenciar Banners</h1>
 
                 <div className="banner-buttons">
-                    <button 
-                        // className={activeCard === "createCard" ? "active" : ""} 
-                        // onClick={() => setActiveCard("createCard")}
-                    >
-                        Criar
-                    </button>
-                    <button
-                        // className={activeCard === "listCard" ? "active" : ""} 
-                        // onClick={() => setActiveCard("listCard")}
-                    >
-                        Listar
-                    </button>
-                    <button
-                        // className={activeCard === "listCard" ? "active" : ""} 
-                        // onClick={() => setActiveCard("listCard")}
-                    >
-                        Editar
-                    </button>
-                    <button
-                        // className={activeCard === "deleteCard" ? "active" : ""} 
-                        // onClick={() => setActiveCard("deleteCard")}
-                    >
-                        Deletar
-                    </button>
-                    <button
-                        // className={activeCard === "uploadCard" ? "active" : ""} 
-                        // onClick={() => setActiveCard("uploadCard")}
-                    >
-                        Upload
-                    </button>
+                    <Btn 
+                        className={activeCard === "createCard" ? "active" : ""}
+                        text="Criar" 
+                        onClick={() => setActiveCard("createCard")}
+                    />
+
+                    <Btn
+                        className={activeCard === "listCard" ? "active" : ""} 
+                        text="Listar"
+                        onClick={() => setActiveCard("listCard")}
+                    />                        
+                    
+                    <Btn
+                        className={activeCard === "editCard" ? "active" : ""} 
+                        text="Editar"
+                        onClick={() => setActiveCard("editCard")}
+                    />
+
+                    <Btn
+                        className={activeCard === "deleteCard" ? "active" : ""}
+                        text="Deletar" 
+                        onClick={() => setActiveCard("deleteCard")}
+                    />
+                    
+                    <Btn
+                        className={activeCard === "uploadCard" ? "active" : ""} 
+                        text="Upload"
+                        onClick={() => setActiveCard("uploadCard")}
+                    />
+
                 </div>
 
             <hr></hr>
 
-                { true ? "" : 
+                { activeCard === "createCard" && 
                 <div className="create-banner">
                     <h3 className="title">Criar Banner</h3>
                     <form>
@@ -59,18 +62,18 @@ const Create: React.FC<any> = (props) => {
                             type="text" 
                             placeholder="Imagens: .png, .jpg"
                         /> 
-                        <button>
-                            Enviar
-                        </button>
+                        <Btn 
+                            text="Criar"
+                        />
                     </form>
                 </div>
                 }
 
-                { true ? "" : 
+                { activeCard === "listCard" && 
                     <List />
                 }
 
-                { true ? "" : 
+                { activeCard === "editCard" && 
                 <div className="create-banner">
                     <h3 className="title">Editar Banner</h3>
                     <form>
@@ -86,37 +89,34 @@ const Create: React.FC<any> = (props) => {
                             type="text" 
                             placeholder="Imagens: .png, .jpg"
                         /> 
-                        <button>
-                            Enviar
-                        </button>
+                        <Btn 
+                             text="Editar"
+                        />
+                            
                     </form>
                 </div>
                 }
 
-                { true ? "" : 
+                { activeCard === "deleteCard" && 
                 <div className="create-banner">
                     <h3 className="title">Deletar Banner</h3>
                     <form>
                         <input 
                             type="text"                        
-                            placeholder="Título" 
-                        />
-                        <input 
-                            type="text"
-                            placeholder="Descrição da imagem" 
-                        />
+                            placeholder="Digite o título da imagem que deseja deletar" 
+                        />                        
                         <input 
                             type="text" 
-                            placeholder="Imagens: .png, .jpg"
+                            placeholder="Digite o ID da imagem que deseja deletar"
                         /> 
                         <button>
-                            Enviar
+                            Deletar
                         </button>
                     </form>
                 </div>
                 }
 
-                { true ? "" : 
+                { activeCard === "uploadCard" && 
                 <div className="create-banner">
                     <h3 className="title">Fazer Upload</h3>
                     <form>

@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import List from "./List";
 
 import { ContainerContact } from "./style";
 
 const Create: React.FC = (props) => {
+
+    const [activeCard, setActiveCard] = useState('createContact')
+
     return (
         <ContainerContact>
             <h1>Contatos</h1>
 
             <div className="contacts-buttons">
                 <button 
-                    // className={activeCard === "createContact" ? "active" : ""} 
-                    // onClick={() => setActiveCard("createContact")}
+                    className={activeCard === "createContact" ? "active" : ""} 
+                    onClick={() => setActiveCard("createContact")}
                 >
                     Criar
                 </button>
                 <button
-                    // className={activeCard === "listContact" ? "active" : ""} 
-                    // onClick={() => setActiveCard("listContact")}
+                    className={activeCard === "listContact" ? "active" : ""} 
+                    onClick={() => setActiveCard("listContact")}
                 >
                     Listar
                 </button>                
                 <button
-                    // className={activeCard === "deleteContact" ? "active" : ""} 
-                    // onClick={() => setActiveCard("deleteContact")}
+                    className={activeCard === "deleteContact" ? "active" : ""} 
+                    onClick={() => setActiveCard("deleteContact")}
                 >
                     Deletar
                 </button>                
             </div>
             <hr></hr>
 
-            { true ? "" :
-                // className={activeCard === "createContact" ? "active" : ""}
+            { activeCard === "createContact" &&                
                 <div className="list-contact">
                     <h3 className="title">Escreva sua mensagem</h3>
                     <form>
@@ -53,35 +56,18 @@ const Create: React.FC = (props) => {
                 </div>
             }
             
-            { true ? "" :
-                // className={activeCard === "listContact" ? "active" : ""} 
-                <div className="list-contact">
-                    <h3 className="title">Escreva sua mensagem</h3>
-                    <form>
-                        <input 
-                            type="text"                        
-                            placeholder="Nome" 
-                        />
-                        <input 
-                            type="text"
-                            placeholder="Email" 
-                        />
-                        <input 
-                            type="text" 
-                            placeholder="Mensagem"
-                        /> 
-                        <button>
-                            Enviar
-                        </button>
-                    </form>                
-                </div>
+            { activeCard === "listContact" &&                
+                <List />
             }
 
-            { true ? "" :
-                // className={activeCard === "deleteContact" ? "active" : ""}  
+            { activeCard === "deleteContact" &&
                 <div className="list-contact">
-                    <h3 className="title">Escreva sua mensagem</h3>
+                    <h3 className="title">Deletar contato</h3>
                     <form>
+                        <input 
+                            type="text"                        
+                            placeholder="ID" 
+                        />
                         <input 
                             type="text"                        
                             placeholder="Nome" 
@@ -89,13 +75,9 @@ const Create: React.FC = (props) => {
                         <input 
                             type="text"
                             placeholder="Email" 
-                        />
-                        <input 
-                            type="text" 
-                            placeholder="Mensagem"
-                        /> 
+                        />                        
                         <button>
-                            Enviar
+                            Deletar
                         </button>
                     </form>                
                 </div>
