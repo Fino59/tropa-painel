@@ -19,7 +19,12 @@ export const Button = styled.button`
     transition: 250ms ease-in-out;
     &:hover {                
         background: red;
-        color: #CC6237;
-        border: 2px solid #CC6237;
+        color: var(--primary);
+        border: 2px solid var(--primary);
     }
+    &:focus {
+        outline: none;                    
+        border-bottom: 3px solid var(--primary);
+        opacity: 1;                    
+    }    
 `;
