@@ -14,7 +14,7 @@ export const ContainerHeader = styled.header`
     width: 100%;
     height: 80px;    
 
-    background-color: #E3E3E3;
+    background-color: var(--light-gray);
     box-shadow: 0px 0px 10px #0000001A;
     .logo > svg{
         width:  150px;
@@ -32,12 +32,12 @@ export const ContainerHeader = styled.header`
                 margin: 20px 10px;
                 padding-left: 20px;
                 line-height: 40px;
-                border-left: 1px solid #CC6237;
+                border-left: 1px solid var(--primary);
                 font-size: 90%;
                 color: #000;
             }
             .user {
-                color: #CC6237;
+                color: var(--primary);
             }
         }
         > nav{
@@ -46,7 +46,7 @@ export const ContainerHeader = styled.header`
             opacity: 0;
             visibility: hidden;
 
-            background-color: #E3E3E3;
+            background-color: var(--light-gray);
             box-shadow: 0px 5px 10px #0000001A;
             transition: .2s;
 
@@ -58,10 +58,10 @@ export const ContainerHeader = styled.header`
                 text-decoration: none;
                 background: transparent;
                 border: none;
-                color: #000;
+                color: var(--black);
                 transition: .2s;
                 &:hover{
-                    color: #CC6237;
+                    color: var(--primary);
                     cursor: pointer;                    
                 }
             }
@@ -76,7 +76,7 @@ export const ContainerHeader = styled.header`
 `
 
 export const Painel = styled.div`
-    background: #CC6237;    
+    background: var(--primary);    
     z-index: 8;
     width: 80px;
     position: fixed;
@@ -114,9 +114,9 @@ export const Painel = styled.div`
                 width: 80px;
                 padding: 20px 0;
                 path {
-                    fill: #E3E3E3;
+                    fill: var(--light-gray);
                     opacity: 1;
-                    stroke: #E3E3E3;
+                    stroke: var(--light-gray);
                     transition: .1s ease-in-out;
                     transition-delay: .1s;
                 }
@@ -126,7 +126,7 @@ export const Painel = styled.div`
                 visibility: hidden;
                 opacity: 0;
                 width: 0;                
-                color: #E3E3E3;
+                color: var(--light-gray);
                 padding: 20px 0;
                 overflow: hidden;
                 white-space: nowrap;
@@ -147,7 +147,7 @@ export const Painel = styled.div`
         transition-delay: .1s;
         > .navbar{
             width: 280px;
-            background-color: #CC6237;
+            background-color: var(--primary);
             overflow-y: auto;
             overflow-x: hidden;
             
@@ -167,9 +167,9 @@ export const Painel = styled.div`
                     }
                     svg {                                                                
                         path {
-                            fill: #fff;
+                            fill: var();
                             opacity: 1;
-                            stroke: #fff;
+                            stroke: var();
                         }
                     }              
                 }

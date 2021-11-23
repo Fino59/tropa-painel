@@ -67,7 +67,7 @@ const Sidebar: React.FC<any> = (props: any) => {
                     </li>                   
 
                     <li className="link">
-                        <Link to="/">                            
+                        <Link to="/login">                            
                             <Arrow />
                             <span className="title">Sair</span>
                         </Link>
