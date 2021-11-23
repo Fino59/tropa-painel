@@ -2,6 +2,8 @@ import React, { Fragment } from "react"
 
 import { Routes, Route } from 'react-router-dom'
 
+import Login from "./components/Pages/Login/Login"
+
 import Home from "./components/Pages/Home/Home"
 
 import Layout from "./components/Layout/Layout"
@@ -18,6 +20,8 @@ export default function Routing({props}: any) {
     console.log('routes', props)
     return (
         <Routes>        
+                    
+                <Route path="/login" element={<Login />} />
 
                 <Route path="/" element={<Layout />} >
                 
