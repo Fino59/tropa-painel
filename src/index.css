@@ -16,9 +16,10 @@ code {
 }
 
 :root {
-  --primary: #CC6237;
-  --secondary: #D6BBA9;
+  --primary: #cc6138;
+  --secondary: #CEBAA8;
   --light-gray: #E3E3E3 ;
+  --primary-dark: #24201A;
   --white: #FFF;
   --black: #000;
 }
