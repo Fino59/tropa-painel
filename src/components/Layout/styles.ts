@@ -17,8 +17,8 @@ export const ContainerHeader = styled.header`
     background-color: var(--light-gray);
     box-shadow: 0px 0px 10px #0000001A;
     .logo > svg{
-        width:  150px;
-        height: 20px;        
+        width:  180px;
+        height: 40px;        
         margin-left: 20px;
     }
     > .containerAuth{
@@ -167,9 +167,9 @@ export const Painel = styled.div`
                     }
                     svg {                                                                
                         path {
-                            fill: var();
+                            fill: var(--white);
                             opacity: 1;
-                            stroke: var();
+                            stroke: var(--white);
                         }
                     }              
                 }
