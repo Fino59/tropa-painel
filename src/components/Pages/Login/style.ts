@@ -53,19 +53,8 @@ export const SignIn = styled.div`
             color: var(--primary);
             &::placeholder {
                 color: var(--primary);
-            }
-            /* &:focus {
-                border-left: 2px solid var(--secondary);
-                border-right: 2px solid var(--secondary);
-                border-top: 2px solid var(--secondary);
-            } */
-        }
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover, 
-        input:-webkit-autofill:focus, 
-        input:-webkit-autofill:active  {
-            -webkit-box-shadow: 0 0 0 30px white inset !important;
-        }
+            }            
+        }        
         .btn.btn-primary {
             width: 100%;
             height: 45px;
@@ -94,6 +83,7 @@ export const SignIn = styled.div`
             color: var(--primary);            
             transition: 250ms ease-in-out;
             &:hover {
+                transform: scale(1.2);
                 color: var(--black);                
             }
         }
@@ -104,7 +94,7 @@ export const LogoDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #24201a;
+    background: var(--primary-dark);
     width: 50%;
     height: 100%;
     border-radius: 0 8px 8px 0;
