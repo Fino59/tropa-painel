@@ -1,12 +1,12 @@
 import React from "react";
 import { ContainerHeader } from "./styles";
-import Tropa from '../Svg/Tropa'
+import LogoTropa from '../Svg/LogoTropa'
 
 const Header: React.FC = (props) => {
     return (
         <ContainerHeader>
             <div className="logo">
-                <Tropa />
+                <LogoTropa />
             </div>
 
             <div className="containerAuth">
