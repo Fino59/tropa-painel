@@ -22,6 +22,7 @@ export const LoginContainer = styled.div`
 
 export const SignIn = styled.div`
     display: flex;    
+    flex-direction: column;
     align-items: center;   
     justify-content: center;
     background: var(--light-gray);
@@ -79,11 +80,31 @@ export const SignIn = styled.div`
                 border: 2px solid var(--primary);
             }
         }
-        .btn.btn-link {
+    }
+    .forgot {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        .password {
             color: var(--primary);            
             transition: 250ms ease-in-out;
+            text-decoration: none;
+            font-size: 18px;
             &:hover {
-                transform: scale(1.2);
+                transform: scale(1.3);
+                color: var(--black);                
+            }
+        }
+        .new-user {
+            font-family: 'Bebas Neue';
+            font-size: 18px;
+            color: var(--primary);            
+            transition: 250ms ease-in-out;
+            background: none;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.3);
                 color: var(--black);                
             }
         }
@@ -97,7 +118,7 @@ export const LogoDiv = styled.div`
     background: var(--primary-dark);
     width: 50%;
     height: 100%;
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0;    
     .icons {
         position: absolute;
         margin-left: auto;
@@ -109,7 +130,7 @@ export const LogoDiv = styled.div`
         svg {
             width: 280px;
             height: 280px;
-            opacity: 0.2;
+            opacity: 0.2;            
             path {
                 stroke: var(--black);               
             }
@@ -118,5 +139,5 @@ export const LogoDiv = styled.div`
     svg {
         width: 70%;
         z-index: 1;
-    }
+    }    
 `
