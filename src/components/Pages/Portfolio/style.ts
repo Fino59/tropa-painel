@@ -4,8 +4,8 @@ export const ContainerPortfolio = styled.div`
     background: var(--light-gray);
     width: 100vw;
     max-width: 1920px;
-    height: 100vh;
-    padding: 10px 10px 10px 80px;  
+    height: 120vh;
+    padding: 100px 10px 10px 80px;      
     position: fixed;      
     h1 {
         color: var(--primary);
@@ -18,8 +18,8 @@ export const ContainerPortfolio = styled.div`
     .portfolio-buttons {
         width: 85%;
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
+        justify-content: flex-start;
+        gap: 100px;
         padding: 10px 0 20px 80px;
         button {
             width: 180px;
@@ -52,11 +52,15 @@ export const ContainerPortfolio = styled.div`
     }
     .create-portfolio {
         background: var(--light-gray);
-        width: 80vw;        
+        width: 80vw;
+        height: 100vh;
         display: flex;
         flex-direction: column; 
         padding: 0 80px; 
-        overflow-y: auto;
+        overflow: auto;
+        @media (max-width: 1400px) {
+            height: 130vh;
+        }
         form {
         width: 40%;
         display: flex;
