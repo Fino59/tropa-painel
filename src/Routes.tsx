@@ -8,6 +8,8 @@ import Home from "./components/Pages/Home/Home"
 
 import Layout from "./components/Layout/Layout"
 
+import User from "./components/Pages/User/User"
+
 import Banner from "./components/Pages/Banner/Create"
 
 import Contacts from './components/Pages/Contacts/Create'
@@ -26,6 +28,8 @@ export default function Routing({props}: any) {
                 <Route path="/" element={<Layout />} >
                 
                     <Route index element={<Home />} />
+
+                    <Route path="/user" element={<User />} />
 
                     <Route path="/banner" element={<Banner />} />
                     

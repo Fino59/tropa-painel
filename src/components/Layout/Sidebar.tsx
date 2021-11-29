@@ -39,9 +39,9 @@ const Sidebar: React.FC<any> = (props: any) => {
             <nav className="navbar">
                 <ul>
                     <li className="link">
-                        <Link to="/">
+                        <Link to="/user">
                             <Astro />
-                            <span className="title">Conta</span>
+                            <span className="title">User</span>
                         </Link>
                     </li>
 
