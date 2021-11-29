@@ -16,9 +16,8 @@ export const ContainerContact = styled.div`
     }
     .contacts-buttons {
         width: 85%;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
+        display: flex;        
+        gap: 100px;
         padding: 10px 0 20px 80px;
         button {
             width: 180px;
