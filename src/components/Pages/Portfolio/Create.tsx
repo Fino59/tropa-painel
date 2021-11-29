@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import { ContainerPortfolio } from "./style";
-import Gear from '../../Svg/Gear'
 import List from "./List";
 
 

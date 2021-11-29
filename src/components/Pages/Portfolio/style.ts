@@ -6,7 +6,8 @@ export const ContainerPortfolio = styled.div`
     max-width: 1920px;
     height: 120vh;
     padding: 100px 10px 10px 80px;      
-    position: fixed;      
+    position: fixed; 
+    overflow: auto;
     h1 {
         color: var(--primary);
         margin: 0;
@@ -56,10 +57,9 @@ export const ContainerPortfolio = styled.div`
         height: 100vh;
         display: flex;
         flex-direction: column; 
-        padding: 0 80px; 
-        overflow: auto;
+        padding: 0 80px;         
         @media (max-width: 1400px) {
-            height: 130vh;
+            height: 130vh;            
         }
         form {
         width: 40%;
