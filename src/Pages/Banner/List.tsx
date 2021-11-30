@@ -1,12 +1,12 @@
 import React from 'react'
-import SearchIcon from '../../../assets/logo/search-icon.png'
-import { UserListContainer } from './styles'
+import SearchIcon from '../../assets/logo/search-icon.png'
+import { Listcontainer } from './style'
 
-const ListUser: React.FC<any> = (props) => {
+const List: React.FC<any> = (props) => {
 
 
     return (
-        <UserListContainer>
+        <Listcontainer>
             <h3 className="title">Listar Banner</h3>
             <table>
                 <thead>
@@ -50,8 +50,8 @@ const ListUser: React.FC<any> = (props) => {
                     </tr>
                 </tbody>              
             </table>
-        </UserListContainer>
+        </Listcontainer>
     )
 }
 
-export default ListUser
+export default List

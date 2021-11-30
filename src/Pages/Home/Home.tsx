@@ -1,5 +1,5 @@
 import React from "react";
-import Tropa from "../../Svg/Tropa";
+import Tropa from "../../components/Svg/Tropa";
 import { HomeContainer } from './style'
 
 const Home: React.FC = (props) => {

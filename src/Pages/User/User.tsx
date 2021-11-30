@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { ContainerUser } from './styles'
-import Btn from '../../../components/form/button/Button'
-import ListUser from './List'
+import Btn from '../../components/form/button/Button'
 
 const User: React.FC<any> = (props) => {
 
@@ -66,7 +65,7 @@ const User: React.FC<any> = (props) => {
                             placeholder="Senha" 
                         />                        
                         <Btn 
-                                text="Deletar"
+                            text="Deletar"
                         />
                             
                     </form>

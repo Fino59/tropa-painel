@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Btn from '../../form/button/Button'
-import TropaUm from '../../Svg/Tropa1'
-import Astro from '../../Svg/Astro'
+import Btn from '../../components/form/button/Button'
+import TropaUm from '../../components/Svg/Tropa1'
+import Astro from '../../components/Svg/Astro'
 import { LoginContainer, LoginPage, LogoDiv, SignIn } from './style'
-import { Modal } from '../../Modal/Modal'
+import { Modal } from '../../components/Modal/Modal'
 
 interface IAuth {
     Email: string

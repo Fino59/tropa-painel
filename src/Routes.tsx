@@ -2,19 +2,19 @@ import React, { Fragment } from "react"
 
 import { Routes, Route } from 'react-router-dom'
 
-import Login from "./components/Pages/Login/Login"
+import Login from "./Pages/Login/Login"
 
-import Home from "./components/Pages/Home/Home"
+import Home from "./Pages/Home/Home"
 
 import Layout from "./components/Layout/Layout"
 
-import User from "./components/Pages/User/User"
+import User from "./Pages/User/User"
 
-import Banner from "./components/Pages/Banner/Create"
+import Banner from "./Pages/Banner/Create"
 
-import Contacts from './components/Pages/Contacts/Create'
+import Contacts from './Pages/Contacts/Create'
 
-import Portfolio from './components/Pages/Portfolio/Create'
+import Portfolio from './Pages/Portfolio/Create'
 
 
 export default function Routing({props}: any) {
